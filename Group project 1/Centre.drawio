@@ -1,11 +1,11 @@
 <mxfile host="65bd71144e">
     <diagram id="Y_MOPtWibpevu8N45386" name="Page-1">
-        <mxGraphModel dx="857" dy="278" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1224" dy="397" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="2" value="" style="group" parent="1" vertex="1" connectable="0">
-                    <mxGeometry x="290" y="60" width="310" height="280" as="geometry"/>
+                    <mxGeometry x="280" y="60" width="310" height="280" as="geometry"/>
                 </mxCell>
                 <mxCell id="3" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="2" vertex="1">
                     <mxGeometry width="310" height="280" as="geometry"/>
@@ -20,10 +20,10 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="6" value="- centreName:String" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" parent="2" vertex="1">
-                    <mxGeometry x="-11.481481481481481" y="50" width="275.55555555555554" height="30" as="geometry"/>
+                    <mxGeometry y="50" width="234.07" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="7" value="- address:String" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" parent="2" vertex="1">
-                    <mxGeometry y="80" width="206.66666666666666" height="30" as="geometry"/>
+                    <mxGeometry x="-10" y="80" width="206.66666666666666" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="8" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Centre()&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Centre(centreName:String, address:String)&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+getName():String&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+getAddress():String&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" parent="2" vertex="1">
                     <mxGeometry y="130" width="310" height="150" as="geometry"/>
