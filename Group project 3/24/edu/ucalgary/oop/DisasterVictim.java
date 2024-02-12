@@ -23,7 +23,8 @@ class DisasterVictim
     public DisasterVictim(String firstName, String ENTRY_DATE)
     {
         this.setFirstName(firstName);
-        this.setENTRY_DATE(ENTRY_DATE);
+        this.ENTRY_DATE = ENTRY_DATE;
+        counter++;
     }
     public String getFirstName()
     {
@@ -105,14 +106,22 @@ class DisasterVictim
     }
     public void removePersonalBelonging(Supply supply)
     {
-        int oldPersonalBelongingsLength = personalBelongings.length;
-        personalBelongings = Arrays.copyOf(personalBelongings, oldPersonalBelongingsLength + 1);
-        this.personalBelongings[oldPersonalBelongingsLength] = supply; 
+        //To be fixed!
     }
     public void addFamilyConnection(FamilyRelation familyConnection)
     {
         int oldFamilyConnectionsLength = this.familyConnections.length;
         this.familyConnections = Arrays.copyOf(this.familyConnections, oldFamilyConnectionsLength + 1);
         this.familyConnections[oldFamilyConnectionsLength] = familyConnection; 
+    }
+    public void removeFamilyConnection(FamilyRelation familyConnection)
+    {
+        //To be fixed!
+    }
+    public void addMedicalRecord(MedicalRecord medicalRecord)
+    {
+        int oldMedicalRecordsLength = this.medicalRecords.length;
+        this.medicalRecords = Arrays.copyOf(this.medicalRecords, oldMedicalRecordsLength + 1);
+        this.medicalRecords[oldMedicalRecordsLength] = medicalRecord; 
     }
 }
