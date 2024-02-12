@@ -2,7 +2,7 @@
 
 package edu.ucalgary.oop;
 
-class FamilyRelation
+public class Supply 
 {
     
 }
