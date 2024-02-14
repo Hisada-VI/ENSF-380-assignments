@@ -1,5 +1,7 @@
 package edu.ucalgary.oop;
 
+import java.util.Arrays;
+
 public class Location {
     private String name;
     private String address;
@@ -35,16 +37,34 @@ public class Location {
         this.supplies = supplies;
     }
     public void addOccupant(DisasterVictim occupant){
-        //todo: add functionality
+        DisasterVictim[] newOccupants = Arrays.copyOf(this.occupants, this.occupants.length + 1); //copy old values into new array
+        newOccupants[newOccupants.length -1] = occupant; //make last object of newArray the updated value
+        this.occupants = newOccupants; // overwrite the data member this.occupants
     }
     public void removeOccupant(DisasterVictim occupant){
-        //todo: add functionality
+        DisasterVictim[] newOccupants = new DisasterVictim[this.occupants.length - 1]; //create new array which is 1 value shorter than the original array
+        for(int i = 0, k = 0; i < this.occupants.length; i++){
+            if(this.occupants[i] != occupant){ //this section will only skip when we parse over the wanted value
+                newOccupants[k] = this.occupants[i]; //update the new list with the old value
+                k++;
+            }
+        }
+        this.occupants = newOccupants; //overwrite this.occupants
     }
     public void addSupply(Supply supply){
-        //todo: add functionality
+        Supply[] newSupplies = Arrays.copyOf(this.supplies, this.supplies.length + 1); //copy old values into new larger array
+        newSupplies[newSupplies.length-1] = supply; //make last object of newSupplies the new value
+        this.supplies = newSupplies; //overwrite original supply list
     }
     public void removeSupply(Supply supply){
-        //todo: add functionality
+        Supply[] newSupplies = new Supply[this.supplies.length - 1]; //create new array which is 1 value shorter than the original array
+        for(int i = 0, k = 0; i < this.supplies.length; i++){
+            if(this.supplies[i] != supply){ //this section will only skip when we parse over the wanted value
+                newSupplies[k] = this.supplies[i]; //update the new list with the old value
+                k++;
+            }
+        }
+        this.supplies = newSupplies; //overwrite this.supplies
     }
 
 
