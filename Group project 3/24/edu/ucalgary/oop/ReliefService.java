@@ -1,5 +1,7 @@
 package edu.ucalgary.oop;
 
+import java.util.regex.Pattern;
+
 public class ReliefService {
     private Inquirer inquirer;
     private DisasterVictim missingPerson;
@@ -35,7 +37,12 @@ public class ReliefService {
     }
 
     public void setDateOfInquiry(String dateOfInquiry) {
-        this.dateOfInquiry = dateOfInquiry;
+        if (dateOfInquiry.matches("^\\d{4}-\\d{2}-\\d{2}$")){
+            this.dateOfInquiry = dateOfInquiry;
+        }
+        else{
+            throw new IllegalArgumentException("Date must be of Format YYYY-MM-DD");
+        }
     }
 
     public String getInfoProvided() {
