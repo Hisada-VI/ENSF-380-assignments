@@ -4,7 +4,7 @@ package edu.ucalgary.oop;
 
 import java.util.Arrays;
 
-class DisasterVictim
+public class DisasterVictim
 {
     /*Attributes*/
     private String firstName;
