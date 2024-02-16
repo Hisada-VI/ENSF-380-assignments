@@ -3,6 +3,8 @@
 package edu.ucalgary.oop;
 
 import java.util.Arrays;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class DisasterVictim
 {
@@ -20,10 +22,19 @@ public class DisasterVictim
     private static int counter;
 
     /*Methods*/
-    public DisasterVictim(String firstName, String ENTRY_DATE)
+    public DisasterVictim(String firstName, String ENTRY_DATE) throws IllegalArgumentException
     {
+        Pattern datePattern = Pattern.compile("^\\d{4}[-]{1}\\d{2}[-]{1}\\d{2}$");
+        Matcher dateMatcher = datePattern.matcher(ENTRY_DATE);
+        if (dateMatcher.find())
+        {
+            this.ENTRY_DATE = ENTRY_DATE;
+        }
+        else
+        {
+            throw new IllegalArgumentException("Date must be of Format YYYY-MM-DD");
+        }
         this.setFirstName(firstName);
-        this.ENTRY_DATE = ENTRY_DATE;
         counter++;
     }
     public String getFirstName()
@@ -74,9 +85,18 @@ public class DisasterVictim
     {
         this.lastName = lastName;
     }
-    public void setDateOfBirth(String dateOfBirth)
+    public void setDateOfBirth(String dateOfBirth) throws IllegalArgumentException
     {
-        this.dateOfBirth = dateOfBirth;
+        Pattern datePattern = Pattern.compile("^\\d{4}[-]{1}\\d{2}[-]{1}\\d{2}$");
+        Matcher dateMatcher = datePattern.matcher(dateOfBirth);
+        if (dateMatcher.find())
+        {
+            this.dateOfBirth = dateOfBirth;
+        }
+        else
+        {
+            throw new IllegalArgumentException("Date must be of Format YYYY-MM-DD");
+        }
     }
     public void setComments(String comments)
     {
