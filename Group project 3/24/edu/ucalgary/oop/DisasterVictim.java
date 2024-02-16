@@ -126,7 +126,15 @@ public class DisasterVictim
     }
     public void removePersonalBelonging(Supply supply)
     {
-        //To be fixed!
+        Supply[] newSupply = new Supply[this.personalBelongings.length-1];
+        for(int i = 0; i < this.personalBelongings.length-1; i++)
+        {
+            if(this.personalBelongings[i] != supply)
+            {
+                newSupply[i] = this.personalBelongings[i];
+            }
+        }
+        this.personalBelongings = newSupply; 
     }
     public void addFamilyConnection(FamilyRelation familyConnection)
     {
@@ -136,7 +144,15 @@ public class DisasterVictim
     }
     public void removeFamilyConnection(FamilyRelation familyConnection)
     {
-        //To be fixed!
+        FamilyRelation[] newFamilyConnection = new FamilyRelation[this.familyConnections.length-1];
+        for(int i = 0; i < this.familyConnections.length-1; i++)
+        {
+            if(this.familyConnections[i] != familyConnection)
+            {
+                newFamilyConnection[i] = this.familyConnections[i];
+            }
+        }
+        this.familyConnections = newFamilyConnection;
     }
     public void addMedicalRecord(MedicalRecord medicalRecord)
     {
