@@ -1,5 +1,6 @@
 package edu.ucalgary.oop;
 
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ReliefService {
@@ -36,8 +37,11 @@ public class ReliefService {
         return this.dateOfInquiry;
     }
 
-    public void setDateOfInquiry(String dateOfInquiry) {
-        if (dateOfInquiry.matches("^\\d{4}-\\d{2}-\\d{2}$")){
+    public void setDateOfInquiry(String dateOfInquiry) throws IllegalArgumentException
+    {
+        Pattern datePattern = Pattern.compile("^\\d{4}[-]{1}\\d{2}[-]{1}\\d{2}$");
+        Matcher dateMatcher = datePattern.matcher(dateOfInquiry);
+        if (dateMatcher.find()){
             this.dateOfInquiry = dateOfInquiry;
         }
         else{
